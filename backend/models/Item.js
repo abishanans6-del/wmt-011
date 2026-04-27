@@ -27,6 +27,11 @@ const itemSchema = new mongoose.Schema(
       required: [true, "Description is required"],
       trim: true,
     },
+    brand: {
+      type: String,
+      required: [true, "Brand is required"],
+      trim: true,
+    },
     imageUrl: {
       type: String,
       default: "",

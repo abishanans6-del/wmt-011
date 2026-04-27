@@ -8,6 +8,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       price: "",
       serialNumber: "",
       description: "",
+      brand: "",
       imageUrl: "",
     }
   );
@@ -22,6 +23,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
     onSubmit({
       ...formData,
       price: Number(formData.price),
+      brand: formData.brand,
     });
   };
 
@@ -42,7 +44,16 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         value={formData.price}
         onChange={handleChange}
         required
-      />
+      />  
+      <label>Brand</label>
+      <input
+        type="text"
+        name="brand"
+        value={formData.brand}
+        onChange={handleChange}
+        required
+      />  
+      
       <label>Serial Number</label>
       <input name="serialNumber" value={formData.serialNumber} onChange={handleChange} required />
 
